@@ -4,3 +4,4 @@ const Landing = () => {
        <Nav/> 
     )
 }
+export default Landing;
