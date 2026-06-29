@@ -2,7 +2,7 @@ import NavLogs from "../../assets/logsNav.png";
 import { Link } from "react-router-dom";
 const Nav = () => {
     return (
-      <div className="flex items-center justify-between px-10 py-5 h-[79px] bg-[#FFFFFF]">
+      <div className="flex items-center justify-between px-10 py-5 h-[79px] bg-[#FFFFFF] fixed inset-x-0 top-0 z-50 shadow-md">
         <section>
           <Link to="/">
             <img src={NavLogs} alt="" className="h-[55px] w-[131.21px]" />
@@ -16,17 +16,26 @@ const Nav = () => {
               </Link>
             </li>
             <li>
-              <Link to="/features" className="hover:text-[#24A0D5] hover:underline">
+              <Link
+                to="/features"
+                className="hover:text-[#24A0D5] hover:underline"
+              >
                 Features
               </Link>
             </li>
             <li>
-              <Link to="/for-ads" className="hover:text-[#24A0D5] hover:underline">
+              <Link
+                to="/for-ads"
+                className="hover:text-[#24A0D5] hover:underline"
+              >
                 For Advertisers
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:text-[#24A0D5] hover:underline">
+              <Link
+                to="/about"
+                className="hover:text-[#24A0D5] hover:underline"
+              >
                 About
               </Link>
             </li>
