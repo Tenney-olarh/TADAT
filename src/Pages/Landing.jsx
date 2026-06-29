@@ -1,7 +1,11 @@
 import Nav from "../Components/Landig/Nav"
+import Home from "../Components/Landig/Home"
 const Landing = () => {
     return (
-       <Nav/> 
-    )
+      <div>
+        <Nav />
+        <Home />
+      </div>
+    );
 }
 export default Landing;
