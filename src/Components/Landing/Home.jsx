@@ -3,14 +3,14 @@ const Home = () => (
   <div className="flex flex-row justify-between bg-[#F5F8FF] px-10 py-10 mt-[80px]">
     {/* LEFT HAND SIDE */}
     <div className="flex flex-col max-w-[600px]">
-      <h1 className="font-normal text-[65px] tracking-[0%] text-[#000000] leading-[80px]">
+      <h1 className="font-normal text-[65px] tracking-[0%] text-[#000000] leading-[85px]">
         Turn Your <br /> Engagement Into{" "}
-        <span className="text-[#1C7CDF]"> Mobile Data</span>
+        <span className="text-[#1C7CDF] font-medium"> Mobile Data</span>
       </h1>
-      <p className="w-[598px] h-[116px] font-extralight text-[24px] tracking-[0%] text-[#000000] leading-[100%] mt-[50px] mb-[50px]">
+      <p className="w-[598px] h-[116px] font-normal text-[24px] tracking-[0%] text-[#000000] leading-[100%] mt-[50px] mb-[50px]">
         Turn your digital interactions into mobile data. <br />
         Simply complete verified tasks on the{" "}
-        <span className="text-[#1C7CDF]">TADAT</span> to earn <br /> seamless
+        <span className="text-[#1C7CDF] font-semibold">TADAT</span> to earn <br /> seamless
         data top-ups paid directly to your <br />
         mobile carrier.
       </p>
