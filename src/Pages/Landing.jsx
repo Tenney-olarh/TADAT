@@ -3,6 +3,7 @@ import Home from "../Components/Landing/Home"
 import Feature from "../Components/Landing/Feature"
 import Bottom from "../Components/Landing/Bottom"
 import Reviews from "../Components/Landing/Reviews"
+import Reearny from "../Components/Landing/Rearny"
 const Landing = () => {
     return (
       <div>
@@ -10,6 +11,7 @@ const Landing = () => {
         <Home />
         <Feature />
         <Reviews />
+        <Reearny/>
         <Bottom />
       </div>
     );
