@@ -80,7 +80,7 @@ const Feature = () => {
                 className="w-[19.88px] h-[21.3px]"
               />{" "}
             </Link>
-            <p className="flex flex-col gap-2">
+            < div className="flex flex-col gap-2">
               {" "}
               <span className="text-[#000000] text-[20px] font-medium leading-[100%] tracking-[0%] ">
                 Zero Bot Interaction
@@ -89,33 +89,33 @@ const Feature = () => {
                 Multi-layered verification ensuring 100% human profile
                 engagement
               </h1>
-            </p>
+            </div>
           </div>
           <section className="flex flex-row gap-2 mt-4">
             <Link>
               <img src={Shield} alt="Shield" />
             </Link>
-            <p>
+            <div>
               <span className="text-[#000000] text-[20px] font-medium leading-[100%] tracking-[0%] ">
                 Secure Protocol
               </span>
               <h1 className="w-[415px] h-[38px] font-normal text-[16px] leading-[100%] tracking-[0%] text-[#000000]">
                 Task completion verification for ultimate campaign integrity
               </h1>
-            </p>
+            </div>
           </section>
           <div className="flex flex-row gap-2 mt-4">
             <Link>
               <img src={Rename} alt="Rename" />
             </Link>
-            <p>
+            <section>
               <span className="text-[#000000] text-[20px] font-medium leading-[100%] tracking-[0%] ">
                 Real-time Analytics
               </span>
               <h1 className="w-[415px] h-[38px] font-normal text-[16px] leading-[100%] tracking-[0%] text-[#000000]">
                 Deep insights into conversion paths and engagement metrics
               </h1>
-            </p>
+            </section>
           </div>
         </div>
       </section>
