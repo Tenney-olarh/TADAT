@@ -14,7 +14,7 @@ import HomeImage from "../../assets/Rectangle 92.png";
                 seamless data top-ups paid directly to your <br />
                 mobile carrier.
               </p>
-              <button className="w-[130px] h-[38px] rounded-[8px] bg-[#1C7CDF] text-[#FFFFFF] font-medium cursor-pointer hover:bg-[#1C7CDF]/80 pt-[0px]">
+              <button className="w-[130px] h-[38px] rounded-[8px] bg-[#1C7CDF] text-[#FFFFFF] font-medium cursor-pointer shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:bg-[#1C7CDF]/80 pt-[0px]">
                 Get Started
               </button>
             </div>
