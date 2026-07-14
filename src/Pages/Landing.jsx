@@ -4,6 +4,7 @@ import Feature from "../Components/Landing/Feature"
 import Bottom from "../Components/Landing/Bottom"
 import Reviews from "../Components/Landing/Reviews"
 import Rearny from "../Components/Landing/Rearny"
+import Footer from "../Components/Landing/Footer"
 const Landing = () => {
     return (
       <div>
@@ -13,6 +14,7 @@ const Landing = () => {
         <Reviews />
         <Rearny/>
         <Bottom />
+        <Footer/>
       </div>
     );
 }
