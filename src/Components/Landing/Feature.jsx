@@ -8,7 +8,10 @@ import Shield from "../../assets/Shield.png";
 import Rename from "../../assets/Rename.png";
 const Feature = () => {
   return (
-    <div className="h-[507px] bg-[#EFF4FF] flex flex-row justify-between px-10 py-10">
+    <div
+      className="h-[507px] bg-[#EFF4FF] flex flex-row justify-between px-10 py-10"
+      id="features"
+    >
       <section className="flex flex-col gap-5">
         <Link to="/user" className="flex flex-row gap-2">
           <img
@@ -80,7 +83,7 @@ const Feature = () => {
                 className="w-[19.88px] h-[21.3px]"
               />{" "}
             </Link>
-            < div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
               {" "}
               <span className="text-[#000000] text-[20px] font-medium leading-[100%] tracking-[0%] ">
                 Zero Bot Interaction

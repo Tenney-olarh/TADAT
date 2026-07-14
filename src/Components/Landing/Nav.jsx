@@ -11,33 +11,33 @@ const Nav = () => {
         <section>
           <ul className="flex flex-row items-center gap-5 font-medium hover">
             <li>
-              <Link to="/" className="hover:text-[#24A0D5] hover:underline">
+              <a href="#home" className="hover:text-[#24A0D5] hover:underline">
                 Home
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/features"
+              <a
+                href="#features"
                 className="hover:text-[#24A0D5] hover:underline"
               >
                 Features
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 to="/for-ads"
                 className="hover:text-[#24A0D5] hover:underline"
               >
                 For Advertisers
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 to="/about"
                 className="hover:text-[#24A0D5] hover:underline"
               >
                 About
-              </Link>
+              </a>
             </li>
           </ul>
         </section>
