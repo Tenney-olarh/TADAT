@@ -1,5 +1,5 @@
-import { EarningsChart } from "@/Components/Dashboard/EarningChart";
-const Dashboard = () => {
+import { EarningsChart } from "@/Components/HomePage/EarningChart";
+const home = () => {
   return (
     <div className="px-10">
       <h1>Dashboard</h1>
@@ -8,4 +8,4 @@ const Dashboard = () => {
     </div>
   );
 };
-export default Dashboard;
+export default home;
