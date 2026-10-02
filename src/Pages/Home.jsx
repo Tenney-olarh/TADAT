@@ -1,9 +1,9 @@
 import { EarningsChart } from "@/Components/HomePage/EarningChart";
+import SideBar from "../Components/HomePage/SideBar"
 const home = () => {
   return (
-    <div className="px-10">
-      <h1>Dashboard</h1>
-          <p>Welcome to the Dashboard!</p>
+    <div>
+      <SideBar/>
           <EarningsChart/>
     </div>
   );

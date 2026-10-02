@@ -47,7 +47,7 @@ export function EarningsChart() {
   const filteredData = rawData.slice(-daysToShow);
 
   return (
-    <Card>
+    <Card className="mx-10">
       <CardHeader className="flex items-center justify-between">
         <CardTitle>
           <Link className="flex items-center gap-2">
