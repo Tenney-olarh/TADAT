@@ -16,7 +16,7 @@ const Login = ({onClose}) => {
           className="w-[13.2px] h-[13.2px] "
         />
       </button>
-      <section className="w-[237px] h-[87px] flex flex-col gap-3 items-center justify-center mt-[25px] mx-auto">
+      <section className="w-[237px] h-[87px] flex flex-col gap-3 items-center justify-center mt-[20px] mx-auto">
         <div>
           <img src={Tadat} alt="Tadat Header" />
         </div>
