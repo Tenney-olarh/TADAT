@@ -1,6 +1,6 @@
 import NavLogs from "../../assets/logsNav.png";
 import { Link } from "react-router-dom";
-const Nav = ({ onLogin }) => (
+const Nav = ({ onLogin, onSignup }) => (
   <div className="flex items-center justify-between px-10 py-5 h-[79px] bg-[#FFFFFF] fixed inset-x-0 top-0 z-50 shadow-md">
     <section>
       <Link to="/">
@@ -36,12 +36,12 @@ const Nav = ({ onLogin }) => (
         <button onClick={onLogin} className="w-[93px] h-[38px] font-medium cursor-pointer hover:bg-[#1C7CDF] hover:text-[#FFFFFF] rounded-[8px]">
           Login
         </button>
-      <Link to="/signup">
-        {" "}
-        <button className="w-[130px] h-[38px] rounded-[8px] bg-[#1C7CDF] text-[#FFFFFF] font-medium cursor-pointer hover:bg-[#1C7CDF]/80">
-          Get Started
-        </button>
-      </Link>
+      <button
+        onClick={onSignup}
+        className="w-[130px] h-[38px] rounded-[8px] bg-[#1C7CDF] text-[#FFFFFF] font-medium cursor-pointer hover:bg-[#1C7CDF]/80"
+      >
+        Get Started
+      </button>
     </section>
   </div>
 );

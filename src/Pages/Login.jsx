@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Tadat from "../assets/tadathead.png"
 import Google from "../assets/devicon_google.png";
 import Vector from "../assets/Vector.png";
-const Login = ({onClose}) => {
+const Login = ({onClose, onSignUp}) => {
   return (
     // <div className=" flex items-center justify-center bg-[#F4F7FF] p-4">
     <div className="relative w-[436px] h-[526px] rounded-[30px] bg-[#EFF4FF] flex flex-col px-10 gap-2 py-6 shadow-sm">
@@ -10,11 +10,7 @@ const Login = ({onClose}) => {
         onClick={onClose}
         className="absolute -top-1 -right-1 bg-[#1B78E0] text-[20px] font-bold w-[24px] h-[24px] rounded-[5px] cursor-pointer hover:text-[#24A0D5]p-1 flex items-center justify-center"
       >
-        <img
-          src={Vector}
-          alt="Close"
-          className="w-[13.2px] h-[13.2px] "
-        />
+        <img src={Vector} alt="Close" className="w-[13.2px] h-[13.2px] " />
       </button>
       <section className="w-[237px] h-[87px] flex flex-col gap-3 items-center justify-center mt-[20px] mx-auto">
         <div>
@@ -104,12 +100,12 @@ const Login = ({onClose}) => {
           <p className="font-medium text-[16px] text-[#3C4949] leading-[100%] tracking-[0%]">
             Do not have an account?
           </p>
-          <Link
-            to="/signup"
+          <button
+            onClick={onSignUp}
             className="text-[#2BBECD] text-[16px] font-bold leading-[100%] tracking-[0%] underline"
           >
             Sign Up
-          </Link>
+          </button>
         </div>
       </section>
     </div>
