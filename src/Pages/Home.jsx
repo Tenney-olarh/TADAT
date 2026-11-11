@@ -1,11 +1,11 @@
-import { EarningsChart } from "@/Components/HomePage/EarningChart";
+// import { EarningsChart } from "@/components/HomePage";
 import SideBar from "../Components/HomePage/SideBar"
 const home = () => {
   return (
-    <div className="flex flex-col w-100% h-full">
+    <div className="flex flex-row w-full h-screen">
       <div>
         <SideBar />
-</div>
+      </div>
     </div>
   );
 };
