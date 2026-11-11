@@ -47,64 +47,65 @@ export function EarningsChart() {
   const filteredData = rawData.slice(-daysToShow);
 
   return (
-    <Card className="mx-10">
-      <CardHeader className="flex items-center justify-between">
-        <CardTitle>
-          <Link className="flex items-center gap-2">
-            <img
-              src={tracks}
-              alt=""
-              className="w-[20px] h-[12px] object-contain"
-            />{" "}
-            <span>
-              Earnings over time <sub>(MB)</sub>
-            </span>
-          </Link>
-        </CardTitle>
-        <Select items={rangeOptions} value={range} onValueChange={setRange}>
-          <SelectTrigger className="w-[140px] bg-[#39A9D9] rounded-[10px] text-[#FFFFFF]">
-            <SelectValue placeholder="Select range" />
-          </SelectTrigger>
-          <SelectContent>
-            {rangeOptions.map((option) => (
-              <SelectItem key={option.value} value={option.value}>
-                {option.label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </CardHeader>
-      <CardContent>
-        <ChartContainer
-          config={chartConfig}
-          className="h-[441px] w-full bg-[#FFFFFFpx]"
-        >
-          <AreaChart data={filteredData}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="date"
-              tickLine={false}
-              axisLine={false}
-              tickMargin={8}
-              tickFormatter={(value) =>
-                new Date(value).toLocaleDateString("en-US", {
-                  month: "short",
-                  day: "numeric",
-                })
-              }
-            />
-            <ChartTooltip content={<ChartTooltipContent />} />
-            <Area
-              dataKey="earnings"
-              type="monotone"
-              fill="var(--color-earnings)"
-              fillOpacity={0.3}
-              stroke="var(--color-earnings)"
-            />
-          </AreaChart>
-        </ChartContainer>
-      </CardContent>
-    </Card>
+    
+      <Card className="w-[1100px] h-[441px] bg-[#FFFFFF] rounded-[20px] shadow-md">
+        <CardHeader className="flex items-center justify-between">
+          <CardTitle>
+            <Link className="flex items-center gap-2">
+              <img
+                src={tracks}
+                alt=""
+                className="w-[20px] h-[12px] object-contain"
+              />{" "}
+              <span>
+                Earnings over time <sub>(MB)</sub>
+              </span>
+            </Link>
+          </CardTitle>
+          <Select items={rangeOptions} value={range} onValueChange={setRange}>
+            <SelectTrigger className="w-[140px] bg-[#39A9D9] rounded-[10px] text-[#FFFFFF]">
+              <SelectValue placeholder="Select range" />
+            </SelectTrigger>
+            <SelectContent>
+              {rangeOptions.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </CardHeader>
+        <CardContent>
+          <ChartContainer
+            config={chartConfig}
+            className="h-[441px] w-full bg-[#FFFFFFpx]"
+          >
+            <AreaChart data={filteredData}>
+              <CartesianGrid vertical={false} />
+              <XAxis
+                dataKey="date"
+                tickLine={false}
+                axisLine={false}
+                tickMargin={8}
+                tickFormatter={(value) =>
+                  new Date(value).toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                  })
+                }
+              />
+              <ChartTooltip content={<ChartTooltipContent />} />
+              <Area
+                dataKey="earnings"
+                type="monotone"
+                fill="var(--color-earnings)"
+                fillOpacity={0.3}
+                stroke="var(--color-earnings)"
+              />
+            </AreaChart>
+          </ChartContainer>
+        </CardContent>
+      </Card>
   );
 }
 export default EarningsChart;

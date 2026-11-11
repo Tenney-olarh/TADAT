@@ -2,9 +2,10 @@ import { EarningsChart } from "@/Components/HomePage/EarningChart";
 import SideBar from "../Components/HomePage/SideBar"
 const home = () => {
   return (
-    <div>
-      <SideBar/>
-          <EarningsChart/>
+    <div className="flex flex-col w-100% h-full">
+      <div>
+        <SideBar />
+</div>
     </div>
   );
 };
