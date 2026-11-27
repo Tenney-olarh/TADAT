@@ -1,135 +1,150 @@
-import {useState} from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import Tadat from "../assets/tadathead.png"
+import Tadat from "../assets/tadathead.png";
 import Google from "../assets/devicon_google.png";
 import Vector from "../assets/Vector.png";
+
 const Signup = ({ onClose, onLogin }) => {
-          const [userName, setUserName] = useState("");
-          const userNameValid = userName.length >= 3 && userName.length <= 10;
-          const handleUserNameChange = (e) => {
-            setUserName(e.target.value);
-          };
+  const [userName, setUserName] = useState("");
+  const userNameValid = userName.length >= 3 && userName.length <= 10;
+
+  const handleUserNameChange = (event) => {
+    setUserName(event.target.value);
+  };
+
   return (
-    <div className="relative w-[436px] h-[640px] rounded-[30px] bg-[#EFF4FF] flex flex-col px-10 gap-2 py-6 ">
+    <div className="relative flex max-h-[calc(100vh-2rem)] w-full max-w-[436px] flex-col gap-2 overflow-y-auto rounded-[30px] bg-[#EFF4FF] px-5 py-6 shadow-sm sm:px-10">
       <button
         onClick={onClose}
-        className="absolute -top-1 -right-1 bg-[#1B78E0] text-[20px] font-bold w-[24px] h-[24px] rounded-[5px] cursor-pointer hover:text-[#24A0D5]p-1 flex items-center justify-center"
+        aria-label="Close sign up"
+        className="absolute right-3 top-3 flex h-6 w-6 items-center justify-center rounded-[5px] bg-[#1B78E0] hover:text-[#24A0D5]"
       >
-        <img src={Vector} alt="Close" className="w-[13.2px] h-[13.2px] " />
+        <img src={Vector} alt="Close" className="h-[13.2px] w-[13.2px]" />
       </button>
-      <section className="w-[237px] h-[87px] flex flex-col gap-3 items-center justify-center mt-[20px] mx-auto">
-        <div>
-          <img src={Tadat} alt="Tadat Header" />
-        </div>
-        <div className="font-medium text-[20px] leading-[100%] tracking-[0%] text-[#000000]">
+
+      <section className="mx-auto mt-4 flex w-full flex-col items-center gap-3 sm:mt-5">
+        <img src={Tadat} alt="Tadat Header" />
+        <p className="text-center text-[20px] font-medium leading-tight tracking-[0%] text-[#000000]">
           Where every action pays
-        </div>
+        </p>
       </section>
-      {/* form section */}
-      <div className=" flex flex-col gap-2">
-        {/* email */}
+
+      <div className="mt-4 flex flex-col gap-2 sm:mt-5">
         <section>
           <label
             htmlFor="email"
-            className="w-[94px] h-[17px]  font-medium text-[14px] leading-[100%] tracking-[0%] text-[#000000] items-center"
+            className="block text-[14px] font-medium leading-tight tracking-[0%] text-[#000000]"
           >
-            Email address<span className="text-[#000000] text-[10px] ">*</span>
+            Email address <span className="text-[10px]">*</span>
           </label>
           <input
             type="email"
             id="email"
             placeholder="Enter your email"
-            className="w-[364px] h-[40px] bg-[#FFFFFF80]  border border-[#24A0D5] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#24A0D5] focus:border-transparent  px-3 placeholder:text-[#6C7A7A0] placeholder:text-[10px] placeholder:font-normal"
+            className="mt-1 h-10 w-full rounded-[10px] border border-[#24A0D5] bg-[#FFFFFF80] px-3 placeholder:text-[10px] placeholder:font-normal placeholder:text-[#6C7A7A] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#24A0D5]"
           />
         </section>
-        {/* UserName */}
+
         <section>
           <label
             htmlFor="userName"
-            className="w-[94px] h-[17px]  font-medium text-[14px] leading-[100%] tracking-[0%] text-[#000000] items-center"
+            className="block text-[14px] font-medium leading-tight tracking-[0%] text-[#000000]"
           >
-            Username<span className="text-[#000000] text-[10px] ">*</span>
+            Username <span className="text-[10px]">*</span>
           </label>
           <input
             type="text"
             id="userName"
             placeholder="Enter your username"
-            className="w-[364px] h-[40px] bg-[#FFFFFF80]  border border-[#24A0D5] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#24A0D5] focus:border-transparent  px-3 placeholder:text-[#6C7A7A0] placeholder:text-[10px] placeholder:font-normal"
             value={userName}
             onChange={handleUserNameChange}
+            className="mt-1 h-10 w-full rounded-[10px] border border-[#24A0D5] bg-[#FFFFFF80] px-3 placeholder:text-[10px] placeholder:font-normal placeholder:text-[#6C7A7A] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#24A0D5]"
           />
+          {userName && (
+            <p
+              className={`mt-1 text-[11px] ${userNameValid ? "text-[#0B7A4B]" : "text-[#C0392B]"}`}
+            >
+              {userNameValid
+                ? "Username looks good"
+                : "Use between 3 and 10 characters"}
+            </p>
+          )}
         </section>
-        {/* PWD */}
+
         <section>
           <label
             htmlFor="password"
-            className="w-[94px] h-[17px]  font-medium text-[14px] leading-[100%] tracking-[0%] text-[#000000] items-center"
+            className="block text-[14px] font-medium leading-tight tracking-[0%] text-[#000000]"
           >
-            Password<span className="text-[#000000] text-[10px] ">*</span>
+            Password <span className="text-[10px]">*</span>
           </label>
           <input
             type="password"
             id="password"
             placeholder="Enter your password"
-            className="w-[364px] h-[40px] bg-[#FFFFFF80]  border border-[#24A0D5] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#24A0D5] focus:border-transparent  px-3 placeholder:text-[#6C7A7A0] placeholder:text-[10px] placeholder:font-normal"
+            className="mt-1 h-10 w-full rounded-[10px] border border-[#24A0D5] bg-[#FFFFFF80] px-3 placeholder:text-[10px] placeholder:font-normal placeholder:text-[#6C7A7A] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#24A0D5]"
           />
         </section>
-        {/* Confirm PWD */}
+
         <section>
           <label
             htmlFor="confirmPassword"
-            className="w-[94px] h-[17px]  font-medium text-[14px] leading-[100%] tracking-[0%] text-[#000000] items-center"
+            className="block text-[14px] font-medium leading-tight tracking-[0%] text-[#000000]"
           >
-            Confirm Password
-            <span className="text-[#000000] text-[10px] ">*</span>
+            Confirm Password <span className="text-[10px]">*</span>
           </label>
           <input
             type="password"
             id="confirmPassword"
             placeholder="Confirm your password"
-            className="w-[364px] h-[40px] bg-[#FFFFFF80]  border border-[#24A0D5] rounded-[10px] focus:outline-none focus:ring-2 focus:ring-[#24A0D5] focus:border-transparent  px-3 placeholder:text-[#6C7A7A0] placeholder:text-[10px] placeholder:font-normal"
+            className="mt-1 h-10 w-full rounded-[10px] border border-[#24A0D5] bg-[#FFFFFF80] px-3 placeholder:text-[10px] placeholder:font-normal placeholder:text-[#6C7A7A] focus:border-transparent focus:outline-none focus:ring-2 focus:ring-[#24A0D5]"
           />
         </section>
       </div>
+
       <button
         type="submit"
-        className="w-[364px] h-[40px] bg-[#24A0D5] text-[#FFFFFF] font-medium text-[14px] rounded-[10px] hover:bg-[#1e88c0] focus:outline-none focus:ring-2 focus:ring-[#24A0D5] focus:border-transparent"
+        className="mt-3 h-10 w-full rounded-[10px] bg-[#24A0D5] text-[14px] font-medium text-[#FFFFFF] hover:bg-[#1e88c0] focus:outline-none focus:ring-2 focus:ring-[#24A0D5] focus:border-transparent"
       >
         Sign Up
       </button>
-      {/* OR */}
-      <section className="flex flex-row justify-center items-center gap-2 mt-1 w-[248px] h-[15px] text-[#00000080] mx-auto">
-        <div className="w-[110px] h-[0] border border-[#6B728080] "></div>
-        <div>or</div>
-        <div className="w-[110px] h-[0] border border-[#6B728080] "></div>
+
+      <section className="mx-auto mt-1 flex w-full items-center gap-2 text-[12px] text-[#00000080]">
+        <span className="h-px flex-1 bg-[#6B728080]" />
+        <p>or</p>
+        <span className="h-px flex-1 bg-[#6B728080]" />
       </section>
-      {/* Google */}
-      <button className="w-[364px] h-[40px] bg-[#FFFFFF] border border-[#24A0D5] rounded-[10px] flex items-center justify-center gap-2 hover:bg-[#f0f0f0] focus:outline-none focus:ring-2 focus:ring-[#24A0D5] focus:border-transparent">
-        <Link className="flex items-center gap-2">
-          <img src={Google} alt="google" /> Continue With Google
-        </Link>
+
+      <button className="flex h-10 w-full items-center justify-center gap-2 rounded-[10px] border border-[#24A0D5] bg-[#FFFFFF] hover:bg-[#f0f0f0] focus:outline-none focus:ring-2 focus:ring-[#24A0D5] focus:border-transparent">
+        <img src={Google} alt="Google" className="h-5 w-5" />
+        Continue With Google
       </button>
-      <p className="text-[10px] text-[#00000080] text-center mt-1 h-[24px] w-[364px] tracking-[0%] leading-[100%] font-medium">
+
+      <p className="mt-2 w-full text-center text-[11px] font-medium leading-relaxed tracking-[0%] text-[#00000080]">
         By continuing, you agree to TADAT’s{" "}
         <Link to="/terms-of-service" className="text-[#24A0D5] underline">
           Terms of Service
         </Link>{" "}
         and acknowledged you’ve read our{" "}
-        <Link to="/privacy-policy" className="text-[#24A0D5] underline ">
+        <Link to="/privacy-policy" className="text-[#24A0D5] underline">
           Privacy Policy
         </Link>
-        .{" "}
+        .
       </p>
-      <section>
-        <div className="w-[436px] h-[0] border border-[#6C7A7AB2] -mx-10 mt-3"></div>
-        <div className=" flex flex-row justify-center items-center gap-2 mt-3 text-[16px] leading-[100%] tracking-[0%] text-[#00000080] font-medium">
+
+      <section className="mt-3 border-t border-[#6C7A7AB2] pt-3">
+        <div className="flex flex-row flex-wrap items-center justify-center gap-2 text-center text-[15px] leading-snug tracking-[0%] text-[#00000080] font-medium sm:text-[16px]">
           <p>Already a member?</p>
-          <button onClick={onLogin} className="text-[#24A0D5] underline font-semibold">
-              Log in
+          <button
+            onClick={onLogin}
+            className="font-semibold text-[#24A0D5] underline"
+          >
+            Log in
           </button>
         </div>
       </section>
     </div>
   );
 };
+
 export default Signup;
