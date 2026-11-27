@@ -1,20 +1,19 @@
 const Rearny = () => {
   return (
-    <div className="w-full h-[497px] bg-[#EFF4FF] px-20 py-15 flex justify-center items-center">
-      <section
-        className="bg-gradient-to-tr from-[#00B5B8] to-[#099EA1] w-[1200px] h-[325px] rounded-[15px] shadow-[0px_4px_4px_0px_#00000040]
-"
-      >
-        <div className="flex flex-col justify-center items-center gap-7 pt-[50px]">
-          <h1 className="w-[354px] h-[58px] text-[48px] leading-[100%] tracking-tight text-[#000000] font-medium">
+    <div className="flex w-full justify-center bg-[#EFF4FF] px-4 py-12 sm:px-6 sm:py-14 lg:px-10 lg:py-16">
+      <section className="flex w-full max-w-[1200px] items-center justify-center rounded-[15px] bg-gradient-to-tr from-[#00B5B8] to-[#099EA1] px-5 py-10 shadow-[0px_4px_4px_0px_#00000040] sm:px-8 sm:py-14 lg:px-12">
+        <div className="flex flex-col items-center gap-5 text-center sm:gap-7">
+          <h1 className="text-[32px] font-medium leading-tight tracking-tight text-[#000000] sm:text-[40px] lg:text-[48px] lg:leading-[100%]">
             Ready To Earn?
           </h1>
-          <p className="w-[783px] h-[38px] text-[16px] leading-[100%] tracking-[0%] text-[#000000] font-normal text-center">
+
+          <p className="max-w-[783px] text-[15px] font-normal leading-relaxed tracking-[0%] text-[#000000] sm:text-[16px]">
             Whether you're looking to earn data rewards or scale your brand with
             100% verified human engagement. TADAT is built for you.
           </p>
-          <button className="w-[261px] h-[53px] bg-[#FFFFFF] rounded-[15px] shadow-[0px_4px_4px_0px_#00000040] cursor-pointer hover:bg-[#FFFFFF]/80 flex justify-center items-center">
-            <span className="bg-gradient-to-l from-[#30D5C7] to-[#0000FFE5] bg-clip-text text-transparent ">
+
+          <button className="flex h-[53px] w-full max-w-[261px] cursor-pointer items-center justify-center rounded-[15px] bg-[#FFFFFF] shadow-[0px_4px_4px_0px_#00000040] transition-colors hover:bg-[#FFFFFF]/80">
+            <span className="bg-gradient-to-l from-[#30D5C7] to-[#0000FFE5] bg-clip-text text-[15px] font-medium text-transparent sm:text-[16px]">
               Get Started Now
             </span>
           </button>
@@ -23,4 +22,5 @@ const Rearny = () => {
     </div>
   );
 };
+
 export default Rearny;

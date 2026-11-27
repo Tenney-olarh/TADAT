@@ -1,8 +1,11 @@
 const Footer = () => {
-    return (
-      <div className="w-full h-[137px] bg-[#EFF4FF] py-10 px-10">
-        <h1 className="text-[#000000] text-[20px] font-medium leading-[100px] tracking-[0%]">© 2026 TADAT. All rights reserved.</h1>
-      </div>
-    );
-}
+  return (
+    <footer className="w-full bg-[#EFF4FF] px-4 py-8 sm:px-6 sm:py-10 lg:px-10">
+      <p className="mx-auto max-w-[1240px] text-[15px] font-medium leading-relaxed tracking-[0%] text-[#000000] sm:text-[18px] lg:text-[20px]">
+        © 2026 TADAT. All rights reserved.
+      </p>
+    </footer>
+  );
+};
+
 export default Footer;

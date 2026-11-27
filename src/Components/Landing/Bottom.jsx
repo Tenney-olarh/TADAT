@@ -1,52 +1,61 @@
-import { Link } from "react-router-dom";
 import Twitter from "../../assets/x_logo.svg.png";
+
 const Bottom = () => {
   return (
-    <div className="w-full h-[286px] bg-[#F3F5FF] flex flex-row justify-around items-center p-10">
-      <section className="flex flex-col gap-5 w-[489px] h-[89px]">
-        <h1 className="text-[36px] leading-[100%] tracking-tight text-[#000000] font-medium">
-          TADAT
-        </h1>
-        <p className=" h-[19px] text-[16px] leading-[100%] tracking-[0%] text-[#0D1C2E] font-normal">
-          Empowering the digital world through value-based connectivity.
-        </p>
-      </section>
+    <footer className="w-full bg-[#F3F5FF] px-4 py-10 sm:px-6 sm:py-12 lg:px-10">
+      <div className="mx-auto grid w-full max-w-[1240px] grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,0.7fr)_minmax(0,0.7fr)_minmax(0,1fr)] lg:gap-10">
+        <section className="flex flex-col gap-4">
+          <h2 className="text-[32px] font-medium leading-tight tracking-tight text-[#000000] sm:text-[36px]">
+            TADAT
+          </h2>
+          <p className="max-w-[489px] text-[15px] font-normal leading-relaxed tracking-[0%] text-[#0D1C2E] sm:text-[16px]">
+            Empowering the digital world through value-based connectivity.
+          </p>
+        </section>
 
-      <div className="flex flex-col gap-5 w-[128px] h-[72px]">
-        <h1 className="w-[93px] h-[29px] text-[24px] leading-[100%] tracking-tight text-[#000000] font-medium">
-          Support
-        </h1>
-        <p className="w-[489px] h-[19px] text-[16px] leading-[100%] tracking-[0%] text-[#0D1C2E] font-normal">
-          Contact Support
-        </p>
+        <section className="flex flex-col gap-4">
+          <h3 className="text-[22px] font-medium leading-tight tracking-tight text-[#000000] sm:text-[24px]">
+            Support
+          </h3>
+          <p className="text-[15px] font-normal leading-relaxed tracking-[0%] text-[#0D1C2E] sm:text-[16px]">
+            Contact Support
+          </p>
+        </section>
+
+        <section className="flex flex-col gap-4">
+          <h3 className="text-[22px] font-medium leading-tight tracking-tight text-[#000000] sm:text-[24px]">
+            Legal
+          </h3>
+          <p className="text-[15px] font-normal leading-relaxed tracking-[0%] text-[#0D1C2E] sm:text-[16px]">
+            Privacy Policy
+          </p>
+          <p className="text-[15px] font-normal leading-relaxed tracking-[0%] text-[#0D1C2E] sm:text-[16px]">
+            Terms of Service
+          </p>
+        </section>
+
+        <section className="flex flex-col gap-4">
+          <h3 className="text-[22px] font-medium leading-tight tracking-tight text-[#000000] sm:text-[24px]">
+            Connect with Us
+          </h3>
+          <a
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex w-fit items-center gap-2 text-[15px] hover:underline sm:text-[16px]"
+          >
+            <img
+              src={Twitter}
+              alt=""
+              aria-hidden="true"
+              className="h-[22px] w-[24px] shrink-0 object-cover"
+            />
+            <span>X/Twitter</span>
+          </a>
+        </section>
       </div>
-
-      <section className="flex flex-col gap-5 w-[130px] h-[75px]">
-        <h1 className="w-[63px] h-[29px] text-[24px] leading-[100%] tracking-tight text-[#000000] font-medium">
-          Legal
-        </h1>
-        <p className=" text-[16px] leading-[100%] tracking-[0%] text-[#0D1C2E] font-normal">
-          Privacy Policy
-        </p>
-        <p className=" text-[16px] leading-[100%] tracking-[0%] text-[#0D1C2E] font-normal">
-          Terms of Service
-        </p>
-      </section>
-
-      <div className="flex flex-col gap-5 w-[191px] h-[75px]">
-        <h1 className="w-[191px] h-[29px] text-[24px] leading-[100%] tracking-tight text-[#000000] font-medium">
-          Connect with Us
-        </h1>
-        <Link className="flex flex-row gap-2">
-          <img
-            src={Twitter}
-            alt="Twitter"
-            className="w-[24px] h-[22px] object-cover"
-          />
-          <span>X/Twitter</span>
-        </Link>
-      </div>
-    </div>
+    </footer>
   );
 };
+
 export default Bottom;
